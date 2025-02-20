@@ -6,12 +6,13 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!--<ResourceDictionary Source="/GridSplitter.xaml"/>-->
-                <!--<ResourceDictionary Source="/GroupBox.xaml"/>-->
-                <!--<ResourceDictionary Source="/ItemsControl.xaml"/>-->
-                <!--<ResourceDictionary Source="/StatusBarItem.xaml"-->
-                <!--<ResourceDictionary Source="/Thumb.xaml"/>-->
-                <!--<ResourceDictionary Source="/UserControl.xaml"/>-->
+                <ResourceDictionary Source="pack://application:,,,/PresentationFramework.Fluent;component/Themes/Fluent.Light.xaml" />
+                <ResourceDictionary Source="/ResourceDictionaries/GridSplitter.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/GroupBox.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/ItemsControl.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/StatusBarItem.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/Thumb.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/UserControl.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
