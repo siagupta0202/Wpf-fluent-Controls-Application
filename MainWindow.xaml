@@ -5,20 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfFluentControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="240"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- ListView for Navigation -->
-        <ListView x:Name="NavigationList" SelectionChanged="NavigationList_SelectionChanged" BorderThickness="0,0,5,0" BorderBrush="gray">
-            <ListViewItem Tag="GridSplitterPage.xaml">GridSplitter</ListViewItem>
-            <ListViewItem Tag="GroupBoxPage.xaml">GroupBox</ListViewItem>
-            <ListViewItem Tag="ThumbPage.xaml">Thumb</ListViewItem>
-            <ListViewItem Tag="HyperlinkPage.xaml">Hyperlink</ListViewItem>
-        </ListView>
+        <Border Background="{DynamicResource SubtleFillColorSecondaryBrush}" CornerRadius="0 12 0 0" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <!-- ListView for Navigation -->
+                <ListView x:Name="NavigationList" SelectionChanged="NavigationList_SelectionChanged" DockPanel.Dock="Top">
+                    <ListViewItem Tag="GridSplitterPage.xaml">
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="[Complete]" />
+                            <Run Text="GridSplitter" />
+                        </TextBlock>
+                    </ListViewItem>
+                    <ListViewItem Tag="ThumbPage.xaml">
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="[Complete]" />
+                            <Run Text="Thumb" />
+                        </TextBlock>
+                    </ListViewItem>
+                    <ListViewItem Tag="HyperlinkPage.xaml">
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="[Needs Review]" />
+                            <Run Text="Hyperlink" />
+                        </TextBlock>
+                    </ListViewItem>
+                    <ListViewItem Tag="ResizeGripPage.xaml">
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="[Needs Review]" />
+                            <Run Text="ResizeGrip" />
+                        </TextBlock>
+                    </ListViewItem>
+                    <ListViewItem Tag="GroupBoxPage.xaml">
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="[In Progress]" />
+                            <Run Text="GroupBox" />
+                        </TextBlock>
+                    </ListViewItem>
+                    <ListViewItem Tag="DataGridPage.xaml">
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="[In Progress]" />
+                            <Run Text="DataGrid" />
+                        </TextBlock>
+                    </ListViewItem>
+                </ListView>
+
+                <ComboBox x:Name="ThemeChanger" Grid.Row="1" Margin="5 10" SelectionChanged="ThemeChanger_SelectionChanged">
+                    <ComboBoxItem Content="Light" IsSelected="True"/>
+                    <ComboBoxItem Content="Dark" />
+                </ComboBox>
+            </Grid>
+        </Border>
 
         <!-- Frame to Load Pages -->
         <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>

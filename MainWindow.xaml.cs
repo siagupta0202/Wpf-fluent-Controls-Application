@@ -31,7 +31,7 @@ public partial class MainWindow : Window
             string pageName = selectedItem.Tag.ToString();
             switch (pageName)
             {
-                case "GridSplitter.xaml":
+                case "GridSplitterPage.xaml":
                     MainFrame.Navigate(new GridSplitterPage());
                     break;
                 case "GroupBoxPage.xaml":
@@ -43,7 +43,15 @@ public partial class MainWindow : Window
                 case "HyperlinkPage.xaml":
                     MainFrame.Navigate(new HyperlinkPage());
                     break;
+                case "ResizeGripPage.xaml":
+                    MainFrame.Navigate(new ResizeGripPage());
+                    break;
             }
         }
+    }
+
+    private void ThemeChanger_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+
     }
 }

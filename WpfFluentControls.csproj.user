@@ -11,6 +11,9 @@
     <Compile Update="ControlPages\HyperlinkPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ControlPages\ResizeGripPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ControlPages\ThumbPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

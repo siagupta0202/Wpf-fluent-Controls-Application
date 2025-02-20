@@ -4,30 +4,78 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfFluentControls.ControlPages"
+      xmlns:sys="clr-namespace:System;assembly=System.Runtime"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="GridSplitterPage" Margin="10">
+    <Page.Resources>
+        <sys:String x:Key="SampleText">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
+        </sys:String>
+        <sys:String x:Key="SampleText2">
+            When an unknown printer took a galley of type and scrambled it to 
+            make a type specimen book.
+        </sys:String>
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+        <TextBlock Style="{DynamicResource TitleTextBlockStyle}" Text="Grid Splitter" Margin="0 0 0 10"/>
 
-        <TextBlock TextWrapping="Wrap" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in"  Grid.Row="0" />
+        <Border BorderBrush="{DynamicResource ControlElevationBorderBrush}" 
+                BorderThickness="2" 
+                Grid.Row="1"
+                Padding="10"
+                CornerRadius="4">
+            <Grid Background="{DynamicResource ControlAltFillColorSecondaryBrush}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
 
-        <GridSplitter Grid.RowSpan="4" Grid.Column="1"
-   ResizeDirection="Columns" Style="{StaticResource DefaultGridSplitterStyle}" />
-        <TextBlock Grid.Row="0" Grid.Column="2" TextWrapping="Wrap" Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web s"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock TextWrapping="Wrap" 
+                           Text="{StaticResource SampleText}" />
+                
+                <TextBlock Grid.Row="0" Grid.Column="2" 
+                           TextWrapping="Wrap" 
+                           Text="{StaticResource SampleText2}"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="2" 
+                           TextWrapping="Wrap" 
+                           Text="{StaticResource SampleText}"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" 
+                           TextWrapping="Wrap" 
+                           Text="{StaticResource SampleText2}"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="2" 
+                           TextWrapping="Wrap" 
+                           Text="{StaticResource SampleText2}"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" 
+                           TextWrapping="Wrap" 
+                           Text="{StaticResource SampleText}"/>
+
+
+                <GridSplitter Grid.RowSpan="5" Grid.Column="1" ResizeDirection="Columns" Style="{StaticResource DefaultGridSplitterStyle}" />
+                <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" ResizeDirection="Rows" Style="{StaticResource DefaultGridSplitterStyle}" />
+                <GridSplitter Grid.Row="3" Grid.ColumnSpan="1" ResizeDirection="Rows" Style="{StaticResource DefaultGridSplitterStyle}" />
+                
+            </Grid>
+        </Border>
     </Grid>
 </Page>

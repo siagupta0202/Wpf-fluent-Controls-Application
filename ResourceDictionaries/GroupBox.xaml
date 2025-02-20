@@ -36,23 +36,23 @@ xmlns:system="clr-namespace:System;assembly=System.Runtime">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type GroupBox}">
                             <Grid
-                        Background="{TemplateBinding Background}"
-                        SnapsToDevicePixels="True">
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True"> 
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <ContentPresenter
-                            Grid.Row="0"
-                            TextElement.FontSize="{DynamicResource GroupBoxHeaderFontSize}"
-                            Margin="{DynamicResource GroupBoxHeaderMargin}"
-                            ContentSource="Header"
-                            RecognizesAccessKey="True"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    Grid.Row="0"
+                                    TextElement.FontSize="{DynamicResource GroupBoxHeaderFontSize}"
+                                    Margin="{DynamicResource GroupBoxHeaderMargin}"
+                                    ContentSource="Header"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                 <ContentPresenter
-                            Grid.Row="1"
-                            Margin="{TemplateBinding Padding}"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    Grid.Row="1"
+                                    Margin="{TemplateBinding Padding}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                             </Grid>
                         </ControlTemplate>
                     </Setter.Value>
