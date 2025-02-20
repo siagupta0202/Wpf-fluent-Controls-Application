@@ -6,14 +6,29 @@
       xmlns:local="clr-namespace:WpfFluentControls.ControlPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="HyperlinkPage">
+      Title="HyperlinkPage" Margin="10">
 
     <Grid>
-        <TextBlock Margin="20">
-            Visit 
-            <Hyperlink NavigateUri="https://www.microsoft.com" RequestNavigate="Hyperlink_RequestNavigate">
-                Microsoft
-            </Hyperlink>
-        </TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Style="{DynamicResource TitleTextBlockStyle}" Text="HyperLink" Margin="0 0 0 10"/>
+
+        <StackPanel Orientation="Vertical"
+                    Margin="0 40" Grid.Row="1">
+            <TextBlock Margin="20">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                <LineBreak/> 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                <LineBreak/> 
+                <Hyperlink NavigateUri="https://www.microsoft.com" 
+                           RequestNavigate="Hyperlink_RequestNavigate"
+                           Style="{StaticResource DefaultHyperlinkStyle}">
+                    Lorem Ipsum link
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
     </Grid>
 </Page>

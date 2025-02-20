@@ -13,6 +13,8 @@
                 <ResourceDictionary Source="/ResourceDictionaries/StatusBarItem.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/Thumb.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/UserControl.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/ResizeGrip.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/Hyperlink.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
