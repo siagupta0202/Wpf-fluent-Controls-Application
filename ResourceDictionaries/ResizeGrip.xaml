@@ -1,21 +1,29 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfFluentControls">
 
-    <!--ResizeGrip Light Theme Brushes-->
-    <Color x:Key="SystemBaseMediumLowColor">#66000000</Color>
-    <SolidColorBrush x:Key="SystemControlForegroundBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
-    <SolidColorBrush x:Key="ResizeGripForeground" Color="{StaticResource SystemBaseMediumLowColor}" />
-
-
-    <!--ResizeGrip Dark Theme Brushes-->
-    <!--<Color x:Key="SystemBaseMediumLowColor">#66FFFFFF</Color>
-    <SolidColorBrush x:Key="SystemControlForegroundBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
-    <SolidColorBrush x:Key="ResizeGripForeground" Color="{StaticResource SystemBaseMediumLowColor}" />-->
-
-
-    <!--ResizeGrip HighContrast Theme Brushes-->
-    <!--<SolidColorBrush x:Key="SystemControlForegroundBaseMediumLowBrush" Color="{StaticResource SystemColorButtonTextColor}" />
-    <SolidColorBrush x:Key="ResizeGripForeground" Color="{StaticResource SystemColorButtonTextColor}" />-->
+    <ResourceDictionary.MergedDictionaries>
+        
+        <!--ResizeGrip Light Theme Brushes-->
+        <local:ColorDictionary Name="Light">
+            <Color x:Key="SystemBaseMediumLowColor">#66000000</Color>
+            <SolidColorBrush x:Key="SystemControlForegroundBaseMediumLowBrush" Color="{DynamicResource SystemBaseMediumLowColor}" />
+            <SolidColorBrush x:Key="ResizeGripForeground" Color="{DynamicResource SystemBaseMediumLowColor}" />
+        </local:ColorDictionary>
+        
+        <!--ResizeGrip Dark Theme Brushes-->
+        <local:ColorDictionary Name="Dark">
+            <Color x:Key="SystemBaseMediumLowColor">#66FFFFFF</Color>
+            <SolidColorBrush x:Key="SystemControlForegroundBaseMediumLowBrush" Color="{DynamicResource SystemBaseMediumLowColor}" />
+            <SolidColorBrush x:Key="ResizeGripForeground" Color="{DynamicResource SystemBaseMediumLowColor}" />
+        </local:ColorDictionary>
+            
+        <!--ResizeGrip HighContrast Theme Brushes-->
+        <local:ColorDictionary Name="HighContrast">
+            <SolidColorBrush x:Key="SystemControlForegroundBaseMediumLowBrush" Color="{DynamicResource SystemColorButtonTextColor}" />
+            <SolidColorBrush x:Key="ResizeGripForeground" Color="{DynamicResource SystemColorButtonTextColor}" />
+        </local:ColorDictionary>
+    </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="DefaultResizeGripStyle" TargetType="{x:Type ResizeGrip}">
         <Setter Property="OverridesDefaultStyle" Value="True" />

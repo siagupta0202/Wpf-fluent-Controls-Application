@@ -7,6 +7,7 @@
       xmlns:sys="clr-namespace:System;assembly=System.Runtime"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      Foreground="{DynamicResource TextFillColorPrimaryBrush}"
       Title="GridSplitterPage" Margin="10">
     <Page.Resources>
         <sys:String x:Key="SampleText">

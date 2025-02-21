@@ -1,37 +1,46 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
-    <!--Hyperlink Light Theme Brushes-->
-    <SolidColorBrush x:Key="HyperlinkForeground" Color="{StaticResource SystemAccentColorDark2}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundPointerOver" Color="{StaticResource SystemAccentColorDark3}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundPressed" Color="{StaticResource SystemAccentColorDark1}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundDisabled" Color="{StaticResource TextFillColorDisabled}" />
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfFluentControls">
+    <ResourceDictionary.MergedDictionaries>
+        <!--Hyperlink Light Theme Brushes-->
+        <local:ColorDictionary Name="Light">
+            <SolidColorBrush x:Key="HyperlinkForeground" Color="{DynamicResource {x:Static SystemColors.AccentColorDark2Key}}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundPointerOver" Color="{DynamicResource {x:Static SystemColors.AccentColorDark3Key}}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundPressed" Color="{DynamicResource {x:Static SystemColors.AccentColorDark1Key}}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundDisabled" Color="{DynamicResource TextFillColorDisabled}" />
+        </local:ColorDictionary>
 
-    <!-- Hyperlink Dark Theme Brushes -->
-    <!--<SolidColorBrush x:Key="HyperlinkForeground" Color="{StaticResource SystemAccentColorLight3}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundPointerOver" Color="{StaticResource SystemAccentColorLight3}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundPressed" Color="{StaticResource SystemAccentColorLight2}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundDisabled" Color="{StaticResource TextFillColorDisabled}" />-->
+        <!-- Hyperlink Dark Theme Brushes -->
+        <local:ColorDictionary Name="Dark">
+            <SolidColorBrush x:Key="HyperlinkForeground" Color="{DynamicResource {x:Static SystemColors.AccentColorLight3Key}}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundPointerOver" Color="{DynamicResource {x:Static SystemColors.AccentColorLight3Key}}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundPressed" Color="{DynamicResource {x:Static SystemColors.AccentColorLight2Key}}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundDisabled" Color="{DynamicResource TextFillColorDisabled}" />
+        </local:ColorDictionary>
 
-    <!-- Hyperlink HighContrast Theme Brushes -->
-    <!--<SolidColorBrush x:Key="HyperlinkForeground" Color="{StaticResource SystemAccentColor}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundPointerOver" Color="{StaticResource SystemColorWindowTextColor}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundPressed" Color="{StaticResource SystemColorHighlightColor}" />
-    <SolidColorBrush x:Key="HyperlinkForegroundDisabled" Color="{StaticResource SystemColorGrayTextColor}" />-->
+        <!-- Hyperlink HighContrast Theme Brushes -->
+        <local:ColorDictionary Name="HighContrast">
+            <SolidColorBrush x:Key="HyperlinkForeground" Color="{DynamicResource {x:Static SystemColors.AccentColorKey}}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundPointerOver" Color="{DynamicResource SystemColorWindowTextColor}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundPressed" Color="{DynamicResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="HyperlinkForegroundDisabled" Color="{DynamicResource SystemColorGrayTextColor}" />
+        </local:ColorDictionary>
+    </ResourceDictionary.MergedDictionaries>
     
     <Style x:Key="DefaultHyperlinkStyle" TargetType="Hyperlink">
-        <Setter Property="Foreground" Value="{DynamicResource HyperlinkButtonForeground}" />
+        <Setter Property="Foreground" Value="{DynamicResource HyperlinkForeground}" />
         <Setter Property="TextDecorations" Value="Underline" />
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource HyperlinkButtonBackgroundPointerOver}" />
+                <Setter Property="Foreground" Value="{DynamicResource HyperlinkForegroundPointerOver}" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Foreground" Value="{DynamicResource HyperlinkButtonForegroundDisabled}" />
+                <Setter Property="Foreground" Value="{DynamicResource HyperlinkForegroundDisabled}" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="True">
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
+            
         </Style.Triggers>
     </Style>
 

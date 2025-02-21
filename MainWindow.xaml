@@ -60,14 +60,15 @@
                 </ListView>
 
                 <ComboBox x:Name="ThemeChanger" Grid.Row="1" Margin="5 10" SelectionChanged="ThemeChanger_SelectionChanged">
-                    <ComboBoxItem Content="Light" IsSelected="True"/>
-                    <ComboBoxItem Content="Dark" />
+                    <ComboBoxItem Content="Light" Tag="Light" />
+                    <ComboBoxItem Content="Dark" Tag="Dark" IsSelected="True"/>
+                    <ComboBoxItem Content="HighContrast" Tag="HighContrast"/>
                 </ComboBox>
             </Grid>
         </Border>
 
         <!-- Frame to Load Pages -->
-        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden" />
 
     </Grid>
 </Window>

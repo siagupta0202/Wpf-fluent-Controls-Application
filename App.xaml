@@ -2,11 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfFluentControls"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow.xaml" ThemeMode="Dark">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/PresentationFramework.Fluent;component/Themes/Fluent.Light.xaml" />
                 <ResourceDictionary Source="/ResourceDictionaries/GridSplitter.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/GroupBox.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/ItemsControl.xaml"/>
