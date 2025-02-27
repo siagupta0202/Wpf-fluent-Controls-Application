@@ -1,22 +1,26 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:system="clr-namespace:System;assembly=System.Runtime">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+                    xmlns:local="clr-namespace:WpfFluentControls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/PresentationFramework.Fluent;component/Themes/Fluent.Light.xaml" />
 
-        <!--**** Brushes for light and dark thememode ****-->
-        <ResourceDictionary>
-            <SolidColorBrush x:Key="StatusBarItemForegroundDisabled" Color="{StaticResource TextFillColorDisabled}" />
-        </ResourceDictionary>
+        <!--**** Brushes for light thememode ****-->
+        <local:ColorDictionary Name="Light">
+            <SolidColorBrush x:Key="StatusBarItemForegroundDisabled" Color="{DynamicResource TextFillColorDisabled}" />
+        </local:ColorDictionary>
+
+        <!--**** Brushes for dark thememode ****-->
+        <local:ColorDictionary Name="Dark">
+            <SolidColorBrush x:Key="StatusBarItemForegroundDisabled" Color="{DynamicResource TextFillColorDisabled}" />
+        </local:ColorDictionary>
 
         <!--**** Brushes for High Contrast thememode ****-->
-        <!--<ResourceDictionary>
-            <SolidColorBrush x:Key="StatusBarItemForegroundDisabled" Color="{StaticResource SystemColorGrayTextColor}" />
-        </ResourceDictionary>-->
+        <local:ColorDictionary Name="HighContrast">
+            <SolidColorBrush x:Key="StatusBarItemForegroundDisabled" Color="{DynamicResource SystemColorGrayTextColor}" />
+        </local:ColorDictionary>
+    </ResourceDictionary.MergedDictionaries>
 
-        <ResourceDictionary>
-
-            <Style x:Key="DefaultStatusBarItemStyle" TargetType="{x:Type StatusBarItem}">
+    <Style x:Key="DefaultStatusBarItemStyle" TargetType="{x:Type StatusBarItem}">
                 <Setter Property="Padding" Value="3"/>
                 <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -44,8 +48,7 @@ xmlns:system="clr-namespace:System;assembly=System.Runtime">
                     </Setter.Value>
                 </Setter>
             </Style>
-            <Style BasedOn="{StaticResource DefaultStatusBarItemStyle}" TargetType="{x:Type StatusBarItem}" />
-        </ResourceDictionary>
-    </ResourceDictionary.MergedDictionaries>
+            
+    <Style BasedOn="{StaticResource DefaultStatusBarItemStyle}" TargetType="{x:Type StatusBarItem}" />
 
 </ResourceDictionary>

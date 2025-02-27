@@ -2,6 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="ControlPages\FramePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ControlPages\FramePage1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ControlPages\FramePage2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ControlPages\GridSplitterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -11,7 +20,13 @@
     <Compile Update="ControlPages\HyperlinkPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ControlPages\ResizeGripPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ControlPages\ThumbPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrameWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

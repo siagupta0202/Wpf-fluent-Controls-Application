@@ -1,67 +1,67 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:system="clr-namespace:System;assembly=System.Runtime">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+                    xmlns:local="clr-namespace:WpfFluentControls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/PresentationFramework.Fluent;component/Themes/Fluent.Light.xaml" />
 
         <!--**** Brushes for Light thememode ****-->
-        <ResourceDictionary>
+        <local:ColorDictionary Name="Light">
             <Color x:Key="SystemBaseHighColor">#FF000000</Color>
-            <SolidColorBrush x:Key="GroupBoxForeground" Color="{StaticResource SystemBaseHighColor}" />
-        </ResourceDictionary>
+            <SolidColorBrush x:Key="GroupBoxForeground" Color="{DynamicResource SystemBaseHighColor}" />
+        </local:ColorDictionary>
 
         <!--**** Brushes for Dark thememode ****-->
-        <!--<ResourceDictionary>
+        <local:ColorDictionary Name="Dark">
             <Color x:Key="SystemBaseHighColor">#FFFFFFFF</Color>
-            <SolidColorBrush x:Key="GroupBoxForeground" Color="{StaticResource SystemBaseHighColor}" />
-        </ResourceDictionary>-->
+            <SolidColorBrush x:Key="GroupBoxForeground" Color="{DynamicResource SystemBaseHighColor}" />
+        </local:ColorDictionary>
 
         <!--**** Brushes for High Contrast thememode ****-->
-        <!--<ResourceDictionary>
-            <SolidColorBrush x:Key="SystemControlForegroundBaseHighBrush" Color="{StaticResource SystemColorButtonTextColor}" />
-            <SolidColorBrush x:Key="GroupBoxForeground" Color="{StaticResource SystemColorButtonTextColor}" />
-        </ResourceDictionary>-->
+        <local:ColorDictionary Name="HighContrast">
+            <SolidColorBrush x:Key="SystemControlForegroundBaseHighBrush" Color="{DynamicResource SystemColorButtonTextColor}" />
+            <SolidColorBrush x:Key="GroupBoxForeground" Color="{DynamicResource SystemColorButtonTextColor}" />
+        </local:ColorDictionary>
 
-        <ResourceDictionary>
-
-            <Thickness x:Key="GroupBoxPadding">0,0,0,15</Thickness>
-            <system:Double x:Key="GroupBoxHeaderFontSize">20</system:Double>
-            <Thickness x:Key="GroupBoxHeaderMargin">0,4,0,20</Thickness>
-
-            <Style x:Key="DefaultGroupBoxStyle" TargetType="{x:Type GroupBox}">
-                <Setter Property="OverridesDefaultStyle" Value="True" />
-                <Setter Property="Foreground" Value="{DynamicResource GroupBoxForeground}" />
-                <Setter Property="Padding" Value="{StaticResource GroupBoxPadding}" />
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type GroupBox}">
-                            <Grid
-                        Background="{TemplateBinding Background}"
-                        SnapsToDevicePixels="True">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-                                <ContentPresenter
-                            Grid.Row="0"
-                            TextElement.FontSize="{DynamicResource GroupBoxHeaderFontSize}"
-                            Margin="{DynamicResource GroupBoxHeaderMargin}"
-                            ContentSource="Header"
-                            RecognizesAccessKey="True"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                                <ContentPresenter
-                            Grid.Row="1"
-                            Margin="{TemplateBinding Padding}"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-
-            <Style BasedOn="{StaticResource DefaultGroupBoxStyle}" TargetType="{x:Type GroupBox}" />
-
-        </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
+
+    <Thickness x:Key="GroupBoxPadding">0,0,0,16</Thickness>
+    <system:Double x:Key="GroupBoxHeaderFontSize">20</system:Double>
+    <Thickness x:Key="GroupBoxHeaderMargin">0,4,0,12</Thickness>
+
+    <Style x:Key="DefaultGroupBoxStyle" TargetType="{x:Type GroupBox}">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Foreground" Value="{DynamicResource GroupBoxForeground}" />
+        <Setter Property="Padding" Value="{DynamicResource GroupBoxPadding}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type GroupBox}">
+                    <Border
+                        BorderBrush="Transparent"
+                        Background="Transparent"
+                        SnapsToDevicePixels="True">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <ContentPresenter
+                                Grid.Row="0"
+                                TextElement.FontSize="{DynamicResource GroupBoxHeaderFontSize}"
+                                Margin="{DynamicResource GroupBoxHeaderMargin}"
+                                ContentSource="Header"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            <ContentPresenter
+                                Grid.Row="1"
+                                Margin="{TemplateBinding Padding}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource DefaultGroupBoxStyle}" TargetType="{x:Type GroupBox}" />
 
 </ResourceDictionary>
