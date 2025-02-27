@@ -57,6 +57,12 @@
                             <Run Text="DataGrid" />
                         </TextBlock>
                     </ListViewItem>
+                    <ListViewItem Tag="FramePage.xaml">
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="[In Progress]" />
+                            <Run Text="Frame" />
+                        </TextBlock>
+                    </ListViewItem>
                 </ListView>
 
                 <ComboBox x:Name="ThemeChanger" Grid.Row="1" Margin="5 10" SelectionChanged="ThemeChanger_SelectionChanged">

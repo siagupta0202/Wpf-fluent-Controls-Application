@@ -14,6 +14,7 @@
                 <ResourceDictionary Source="/ResourceDictionaries/UserControl.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/ResizeGrip.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/Hyperlink.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/Frame.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

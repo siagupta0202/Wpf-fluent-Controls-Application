@@ -53,6 +53,9 @@ public partial class MainWindow : Window
             case "ResizeGripPage.xaml":
                 MainFrame.Navigate(new ResizeGripPage());
                 break;
+            case "FramePage.xaml":
+                MainFrame.Navigate(new FramePage());
+                break;
         }
     }
 

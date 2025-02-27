@@ -20,27 +20,24 @@
 
         <!-- Hyperlink HighContrast Theme Brushes -->
         <local:ColorDictionary Name="HighContrast">
-            <SolidColorBrush x:Key="HyperlinkForeground" Color="{DynamicResource {x:Static SystemColors.AccentColorKey}}" />
+            <SolidColorBrush x:Key="HyperlinkForeground" Color="{DynamicResource SystemColorHighlightColor}" />
             <SolidColorBrush x:Key="HyperlinkForegroundPointerOver" Color="{DynamicResource SystemColorWindowTextColor}" />
             <SolidColorBrush x:Key="HyperlinkForegroundPressed" Color="{DynamicResource SystemColorHighlightColor}" />
             <SolidColorBrush x:Key="HyperlinkForegroundDisabled" Color="{DynamicResource SystemColorGrayTextColor}" />
         </local:ColorDictionary>
     </ResourceDictionary.MergedDictionaries>
-    
+
     <Style x:Key="DefaultHyperlinkStyle" TargetType="Hyperlink">
         <Setter Property="Foreground" Value="{DynamicResource HyperlinkForeground}" />
         <Setter Property="TextDecorations" Value="Underline" />
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource HyperlinkForegroundPointerOver}" />
+                <Setter Property="Foreground" Value="{DynamicResource HyperlinkBackgroundPointerOver}" />
+                <Setter Property="TextDecorations" Value="None" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Foreground" Value="{DynamicResource HyperlinkForegroundDisabled}" />
             </Trigger>
-            <Trigger Property="IsEnabled" Value="True">
-                <Setter Property="Cursor" Value="Hand" />
-            </Trigger>
-            
         </Style.Triggers>
     </Style>
 
