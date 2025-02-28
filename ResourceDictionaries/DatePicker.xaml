@@ -79,7 +79,7 @@
         <Setter Property="VerticalAlignment" Value="Center" />
 
         <Setter Property="FocusVisualStyle" Value="{DynamicResource DefaultControlFocusVisualStyle}" />
-        <Setter Property="CalendarStyle" Value="{DynamicResource DefaultCalendarStyle}" />
+        <Setter Property="CalendarStyle" Value="{DynamicResource DatePickerCalendarStyle}" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
         <Setter Property="Border.CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
         <Setter Property="ContextMenu" Value="{DynamicResource DefaultControlContextMenu}" />

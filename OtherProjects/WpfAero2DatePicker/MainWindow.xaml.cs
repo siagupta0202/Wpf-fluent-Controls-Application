@@ -20,5 +20,23 @@ namespace WpfAero2DatePicker
         {
             InitializeComponent();
         }
+
+        private void Aero2_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.ThemeMode = ThemeMode.None;
+            this.FontSize = 12;
+        }
+
+        private void Light_Click(object sender, RoutedEventArgs e)
+        {
+            this.FontSize = 14;
+            Application.Current.ThemeMode = ThemeMode.Light;
+        }
+
+        private void Dark_Click(object sender, RoutedEventArgs e)
+        {
+            this.FontSize = 14;
+            Application.Current.ThemeMode = ThemeMode.Dark;
+        }
     }
 }

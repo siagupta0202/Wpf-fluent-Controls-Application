@@ -8,24 +8,15 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Foreground="{DynamicResource TextFillColorPrimaryBrush}"
       Title="DatePickerPage" Margin="10">
-    <Page.Resources>
-        <ResourceDictionary Source="/ResourceDictionaries/DatePicker.xaml"/>
-    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <TextBlock Style="{DynamicResource TitleTextBlockStyle}" Text="DatePicker" Margin="0 0 0 10"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <TextBlock Text="Opens a window with current WPF Fluent style" Margin="0 0 10 0" VerticalAlignment="Center"/>
-            <Button x:Name="OpenDatePickerWindow" Click="OpenDatePickerWindow_Click" Content="Open Current DatePicker" />
-        </StackPanel>
-
-        <ScrollViewer Grid.Row="2" Margin="0 10 0 0">
+        <ScrollViewer Grid.Row="1" Margin="0 10 0 0">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Height="60">
                     <DatePicker Margin="5"/>
