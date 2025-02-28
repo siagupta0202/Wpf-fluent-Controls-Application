@@ -9,6 +9,16 @@
     <NoWarn>$(NoWarn);WPF0001</NoWarn>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!--<Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+    <Page Remove="NewFolder\**" />-->
+    <None Remove="OtherProjects\**" />
+    <Page Remove="OtherProjects\**" />
+    <Compile Remove="OtherProjects\**" />
+  </ItemGroup>
+
 	<!--<PropertyGroup>
 		<WpfRepoRoot>C:\Users\siagupta\source\repos\wpf-sg</WpfRepoRoot>
 	</PropertyGroup>

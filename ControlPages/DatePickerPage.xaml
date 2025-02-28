@@ -1,0 +1,46 @@
+﻿<Page x:Class="WpfFluentControls.ControlPages.DatePickerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfFluentControls.ControlPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+      Title="DatePickerPage" Margin="10">
+    <Page.Resources>
+        <ResourceDictionary Source="/ResourceDictionaries/DatePicker.xaml"/>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Style="{DynamicResource TitleTextBlockStyle}" Text="DatePicker" Margin="0 0 0 10"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBlock Text="Opens a window with current WPF Fluent style" Margin="0 0 10 0" VerticalAlignment="Center"/>
+            <Button x:Name="OpenDatePickerWindow" Click="OpenDatePickerWindow_Click" Content="Open Current DatePicker" />
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="2" Margin="0 10 0 0">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Height="60">
+                    <DatePicker Margin="5"/>
+                </StackPanel>
+                <DatePicker Margin="5"/>
+                <DatePicker Margin="5" Height="50" Padding="20 10 0 10"/>
+                <DatePicker Margin="5" Width="200" />
+                <DatePicker Margin="5" Height="50"  Width="200" HorizontalAlignment="Right" />
+                <DatePicker Margin="5" Height="50" Width="200" HorizontalContentAlignment="Right" />
+                <DatePicker Margin="5" Height="50" Width="200" VerticalContentAlignment="Bottom" />
+                <DatePicker Margin="5" Height="50" Width="200" IsEnabled="False" />
+                <DatePicker Margin="5" IsTodayHighlighted="False" />
+                <DatePicker Margin="5" Background="Orange" Height="50" Width="200" />
+                <DatePicker Margin="5" BorderBrush="Green" Height="50" Width="200" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

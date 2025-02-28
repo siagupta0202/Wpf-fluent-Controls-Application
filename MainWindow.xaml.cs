@@ -56,6 +56,12 @@ public partial class MainWindow : Window
             case "FramePage.xaml":
                 MainFrame.Navigate(new FramePage());
                 break;
+            case "DatePickerPage.xaml":
+                MainFrame.Navigate(new DatePickerPage());
+                break;
+            case "DataGridPage.xaml":
+                MainFrame.Navigate(new DataGridPage());
+                break;
         }
     }
 

@@ -35,19 +35,19 @@
                     </ListViewItem>
                     <ListViewItem Tag="HyperlinkPage.xaml">
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="[Needs Review]" />
+                            <Run FontWeight="Bold" Text="[Complete]" />
                             <Run Text="Hyperlink" />
                         </TextBlock>
                     </ListViewItem>
                     <ListViewItem Tag="ResizeGripPage.xaml">
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="[Needs Review]" />
+                            <Run FontWeight="Bold" Text="[Complete]" />
                             <Run Text="ResizeGrip" />
                         </TextBlock>
                     </ListViewItem>
                     <ListViewItem Tag="GroupBoxPage.xaml">
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="[In Progress]" />
+                            <Run FontWeight="Bold" Text="[Complete]" />
                             <Run Text="GroupBox" />
                         </TextBlock>
                     </ListViewItem>
@@ -61,6 +61,12 @@
                         <TextBlock>
                             <Run FontWeight="Bold" Text="[In Progress]" />
                             <Run Text="Frame" />
+                        </TextBlock>
+                    </ListViewItem>
+                    <ListViewItem Tag="DatePickerPage.xaml">
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="[In Progress]" />
+                            <Run Text="DatePicker" />
                         </TextBlock>
                     </ListViewItem>
                 </ListView>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAero2DatePicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAero2DatePicker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="24" FontWeight="Bold" Text="DatePicker Aero2 Style" Margin="10"/>
+
+        <ScrollViewer Grid.Row="1" Margin="10">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Height="60">
+                    <DatePicker Margin="5"/>
+                </StackPanel>
+                <DatePicker Margin="5"/>
+                <DatePicker Margin="5" Height="50" Padding="20 10 0 10"/>
+                <DatePicker Margin="5" Width="200" />
+                <DatePicker Margin="5" Height="50"  Width="200" HorizontalAlignment="Right" />
+                <DatePicker Margin="5" Height="50" Width="200" HorizontalContentAlignment="Right" />
+                <DatePicker Margin="5" Height="50" Width="200" VerticalContentAlignment="Bottom" />
+                <DatePicker Margin="5" Height="50" Width="200" IsEnabled="False" />
+                <DatePicker Margin="5" IsTodayHighlighted="False" />
+                <DatePicker Margin="5" Background="Orange" Height="50" Width="200" />
+                <DatePicker Margin="5" BorderBrush="Green" Height="50" Width="200" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
