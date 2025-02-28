@@ -15,6 +15,8 @@
                 <ResourceDictionary Source="/ResourceDictionaries/ResizeGrip.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/Hyperlink.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/Frame.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/DatePicker.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/DataGrid.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

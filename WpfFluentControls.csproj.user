@@ -2,6 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="ControlPages\DataGridPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ControlPages\DatePickerCurrentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ControlPages\DatePickerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ControlPages\FramePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
